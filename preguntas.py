@@ -21,7 +21,7 @@ def pregunta_01():
     df = pd.read_csv("insurance.csv")
 
     # Asigne la columna `charges` a la variable `y`.
-    y = df['charges'].to_numpy()
+    y = df['charges']
 
     # Asigne una copia del dataframe `df` a la variable `X`.
     X = df.copy()
@@ -147,7 +147,7 @@ def pregunta_04():
     """
 
     # Importe mean_squared_error
-    from ____ import ____
+    from sklearn.metrics import mean_squared_error
 
     # Obtenga el pipeline optimo de la pregunta 3.
     gridSearchCV = pregunta_03()
