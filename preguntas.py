@@ -102,7 +102,7 @@ def pregunta_03():
             # características más importantes. Utilice la función f_regression.
             (
                 "selectKBest",
-                SelectKBest(score_func=f_regression),
+                SelectKBest(f_regression, k = 'all'),
             ),
             # Paso 3: Construya un modelo de regresión lineal.
             (
@@ -118,7 +118,7 @@ def pregunta_03():
     # Defina un diccionario de parámetros para el GridSearchCV. Se deben
     # considerar valores desde 1 hasta 11 regresores para el modelo
     param_grid = {
-        "LR__normalize": np.arange(1, 12),
+        "LR__copy_X": np.arange(1, 12),
     }
 
     # Defina una instancia de GridSearchCV con el pipeline y el diccionario de
